@@ -23,12 +23,14 @@ def profiling(df: pd.DataFrame, title: str="sales",
 
 
 @click.command()
-@click.option("-f", "--filepath", default=None, type=str, required=True)
+@click.option("-f", "--filepath", default="data/retail_sales_data.csv", type=str, required=True)
 @click.option("-t", "--title", default="sales", type=str)
 @click.option('-m', '--minimal', is_flag=True, default=False)
-@click.option('-s', '--sample', default=None, type=float)
-def main(filepath, title, minimal) -> None:
+@click.option('-s', '--sample', type=float, default=None)
+def main(filepath, title, minimal, sample) -> None:
     df = load_dataset(filepath)
+    if sample:
+        df = df.sample(frac=sample)
     profiling(df, title=title,  minimal=minimal)
 
 
