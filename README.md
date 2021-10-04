@@ -8,9 +8,11 @@ Voilà un *screenshot* du résultat:
 
 
 ## Ingrédients nécessaires
-* Python 3 installé sur son poste
+* Python 3 installé sur son poste.
+[Voici le lien de téléchargement](https://www.python.org/downloads/)
 
-* 5 minutes de temps disponible
+
+* 5 minutes de ton temps
 
 * Ta bonne humeur
 
@@ -38,6 +40,8 @@ pip install -r requirements.txt
 ```python
 python src/dashboard_5min.py
 ```
+
+**Le résultat se trouve dans le dossier sous le format: 5min_dashboard_TITRE_YYYY-MM-DD.html**
 
 ## Les options
 

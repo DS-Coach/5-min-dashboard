@@ -19,7 +19,7 @@ def profiling(df: pd.DataFrame, title: str="sales",
     """
     today = dt.now().strftime("%Y-%m-%d")
     profile = ProfileReport(df, title=title.title(), minimal=minimal)
-    profile.to_file(project_path.joinpath(f"5_min_dashboad_{title}_{today}.html")) 
+    profile.to_file(project_path.joinpath(f"5min_dashboad_{title}_{today}.html")) 
 
 
 @click.command()
